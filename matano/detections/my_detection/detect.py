@@ -1,4 +1,3 @@
-# 
-
 def detect(record):
-    return False
+    if True:
+        return False
