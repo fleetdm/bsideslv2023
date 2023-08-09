@@ -5,6 +5,5 @@ aws:
   region: "us-east-2" # Specify the AWS region to deploy to.
 
   # Optionally, specify any tags to apply to the deployed resources.
-  # tags:
-  #   key: "my_tag"
-
+  tags:
+    key: "matano"

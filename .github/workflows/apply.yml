@@ -24,3 +24,10 @@ jobs:
           chmod +x matano-linux-x64.sh
           sudo ./matano-linux-x64.sh
           matano diff
+      - name: Apply Matano configuration
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          cd matano
+          matano diff
