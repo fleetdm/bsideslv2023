@@ -6,11 +6,11 @@ then
     npm install -g fleetctl
 fi
 
+# Set up fleetctl
 export ADDRESS=$FLEET_ADDRESS
 export CONTEXT=bsides
-
+export TOKEN=$FLEET_TOKEN
 fleetctl config set --address=$ADDRESS
 
-export TOKEN=$FLEET_TOKEN
-
-fleetctl apply -f queries.yml
+# Apply the queries configuration
+fleetctl apply -f ./*.yml
