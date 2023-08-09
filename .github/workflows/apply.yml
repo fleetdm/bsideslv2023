@@ -1,0 +1,14 @@
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  apply-configs:
+    name: Apply configurations
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Apply Fleet configuration
+        run: |
+          cd fleet
+          ./apply-queries.sh
