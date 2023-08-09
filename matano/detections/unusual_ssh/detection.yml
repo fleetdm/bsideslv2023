@@ -18,8 +18,8 @@ alert:
   deduplication_window_minutes: 15
   destinations:
     - slack
-tables:
-  - osquery
-modified: 2022/08/09
-tags:
-  - ssh
+  tables:
+    - osquery
+  modified: 2022/08/09
+  tags:
+    - ssh
