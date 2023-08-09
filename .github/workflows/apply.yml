@@ -8,6 +8,8 @@ jobs:
     name: Apply configurations
     runs-on: ubuntu-22.04
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Apply Fleet configuration
         run: |
           cd fleet
