@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Apply Fleet configuration
-        with:
+        env:
           FLEET_ADDRESS: ${{ secrets.FLEET_ADDRESS }}
           FLEET_TOKEN: ${{ secrets.FLEET_TOKEN }}
         run: |
