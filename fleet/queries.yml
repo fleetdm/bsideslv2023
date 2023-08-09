@@ -9,3 +9,16 @@ spec:
   interval: 10 # 10 seconds
   observer_can_run: true
   automations_enabled: true
+
+---
+apiVersion: v1
+kind: query
+spec:
+  name: processes
+  description: Get all the processes running on the system
+  query: select * from processes
+  team: ""
+  logging: differential_ignore_removals
+  interval: 10 # 10 seconds
+  observer_can_run: true
+  automations_enabled: true
