@@ -7,10 +7,8 @@ then
 fi
 
 # Set up fleetctl
-export ADDRESS=$FLEET_ADDRESS
 export CONTEXT=bsides
-export TOKEN=$FLEET_TOKEN
-fleetctl config set --address=$ADDRESS
+fleetctl config set --address="$FLEET_ADDRESS" --token="$FLEET_TOKEN"
 
 # Apply the queries configuration
 fleetctl apply -f ./*.yml
