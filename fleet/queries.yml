@@ -22,3 +22,19 @@ spec:
   interval: 10 # 10 seconds
   observer_can_run: true
   automations_enabled: true
+
+---
+apiVersion: v1
+kind: query
+spec:
+  name: nonstandard_sshd
+  description: Detect sshd listening on ports other than 22
+  query: |
+    SELECT *
+    FROM processes
+    JOIN process_open_sockets
+      USING (pid)
+    WHERE name = 'sshd'
+      AND local_port != 22;
+  interval: 10 # 10 seconds
+  automations_enabled: true

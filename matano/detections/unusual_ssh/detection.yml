@@ -1,0 +1,25 @@
+created: 2023/08/01
+name: unusual_sshd
+display_name: Unusual SSHD processes detected
+description: SSHD process was detected on a non-standard port (not port 22).
+enabled: true
+runbook: Investigate whether this could be malicious activity.
+references:
+  - https://internalwiki.example.com/sshd_configurations
+false_positives:
+  - Engineers/ops staff sometimes believe that running sshd on a non-standard port increases security.
+reports:
+  attack:
+    - t1021
+
+alert:
+  severity: medium
+  threshold: 1
+  deduplication_window_minutes: 15
+  destinations:
+    - slack
+tables:
+  - osquery
+modified: 2022/08/09
+tags:
+  - ssh
