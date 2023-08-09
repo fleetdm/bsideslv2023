@@ -1,0 +1,6 @@
+# 
+name: "test_log_source"
+
+schema:
+  fields: []
+  ecs_field_names: []
